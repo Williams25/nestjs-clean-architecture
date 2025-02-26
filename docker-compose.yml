@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres
+    container_name: postgres-nestjs-clean-architecture
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: nestjs-clean
+      PGDATA: /data/postgresql
+    volumes:
+      - ./data/pg:/data/postgresql
